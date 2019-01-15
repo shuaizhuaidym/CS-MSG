@@ -1,0 +1,10 @@
+E:\CPPWorkSpace\CS-MSG\CS-MSG\bin\Debug\CS-MSG.exe
+E:\CPPWorkSpace\CS-MSG\CS-MSG\bin\Debug\CS-MSG.pdb
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\CS_MSG.Properties.Resources.resources
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\CS-MSG.csproj.GenerateResource.Cache
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\CS-MSG.exe
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\CS-MSG.pdb
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\Interop.PNXClientLib.dll
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\CS-MSG.csproj.ResolveComReference.cache
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\CS_MSG.FrmStart.resources
+E:\CPPWorkSpace\CS-MSG\CS-MSG\obj\x86\Debug\CS_MSG.Resources.Resource1.resources
