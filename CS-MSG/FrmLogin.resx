@@ -117,35 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="img-qrcode" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img-qrcode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_girl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img-girl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_20190117091916685_easyicon_net_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20190117091916685_easyicon_net_16.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="balloom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balloom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wind" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sky.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="btnLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAANp3Z/zGZ2P8slNf/KJDW/yOM1f8eiNT/GoTT/xWA0v8RfNH/DnnR/wp20P8Hc8//BHDP/wFu
+        zv8AAAAAAAAAAD2j2v+86/r/vOv8/7/u/v/G9P//zvj//9P6///Q+P//x/L//7rp/P+z5Pn/sOL4/7Di
+        +P8Fcc//AAAAAAAAAABDqNv/v+z7/1nP9f9BsOz/Trrv/1rC7/9gxu//XMTv/0y27/83peb/Kprh/zi4
+        7v+x4/j/CXXQ/wAAAAAAAAAASa3c/8Hu+/9f0/f/bNv8/3/l//+P7f//l/L//5Pt//983///W8z4/0a+
+        7/88uu7/s+P5/w550f8AAAAAAAAAAE6y3f/D7/v/Zdb4/0y27P9ave//lev//zCX3f9Ngqv/hOH//0Gp
+        6f8yn+H/Qr7v/7Tl+f8TftL/AAAAAAAAAABTt97/xvD8/2rZ+P984v3/kOj//5np//8yn9//VIuy/4ri
+        //9q0Pn/UMXx/0bB8P+25/n/GIPT/wAAAAAAAAAAWLvf/8fx/P9v3Pn/Vrvt/2G97/+b5///Nabi/0uk
+        4f+Q4v//Sa3p/zik4/9JxPD/uOj5/x6I1P8AAAAAAAAAAFy/4P/I8/z/dd/5/4nm/f+V5///muX//6ru
+        //+o7f//meP//3TV+f9ZzPP/T8jx/7vp+v8kjdX/AAAAAAAAAABgwuH/yfP8/8vz/f/U9v7/1/b//9j0
+        ///g+P//3/j//9r1///N8fz/wu36/73r+v+96/r/K5PW/wAAAAAAAAAAYcPh/4igqP+RkZH/jo6O/1q5
+        3P9VuN//UbXe/02x3f9Jrdz/RqjX/3h4eP92dnb/ZX6N/zGZ2P8AAAAAAAAAAAAAAACZmZnDxsbG/5SU
+        lP+Pj48IAAAAAAAAAAAAAAAAAAAAAH5+fgh9fX3/q6ur/3Z2dsMAAAAAAAAAAAAAAAAAAAAAnZ2dr8TE
+        xP+hoaH/k5OTKAAAAAAAAAAAAAAAAAAAAACCgoIoiYmJ/6mpqf95eXmvAAAAAAAAAAAAAAAAAAAAAKGh
+        oXS6urr/v7+//5iYmN2UlJQekZGRBI6OjgSKiooeh4eH5aioqP+enp7/fX19dAAAAAAAAAAAAAAAAAAA
+        AACkpKQMoaGh28TExP++vr7/oaGh/5aWlv+Tk5P/l5eX/66urv+urq7/hISE24GBgQgAAAAAAAAAAAAA
+        AAAAAAAAAAAAAKSkpDCioqLfvLy8/8rKyv/MzMz/ysrK/8LCwv+tra3/jIyM34mJiTAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAApaWlDKOjo4GgoKC7nZ2dzZqams2Xl5e7lJSUgZCQkAwAAAAAAAAAAAAA
+        AAAAAAAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMfjAADH4wAA48cAAOAH
+        AADwDwAA+B8AAA==
+</value>
   </data>
 </root>

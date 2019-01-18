@@ -32,18 +32,23 @@
             // labelCopyRight
             // 
             this.labelCopyRight.AutoSize = true;
-            this.labelCopyRight.Location = new System.Drawing.Point(444, 369);
+            this.labelCopyRight.Location = new System.Drawing.Point(156, 279);
+            this.labelCopyRight.MinimumSize = new System.Drawing.Size(200, 0);
             this.labelCopyRight.Name = "labelCopyRight";
-            this.labelCopyRight.Size = new System.Drawing.Size(65, 12);
+            this.labelCopyRight.Size = new System.Drawing.Size(200, 12);
             this.labelCopyRight.TabIndex = 0;
             this.labelCopyRight.Text = "copy right";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 339);
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.progressBar1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.progressBar1.Location = new System.Drawing.Point(12, 259);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(696, 15);
+            this.progressBar1.Size = new System.Drawing.Size(456, 17);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 1;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // workerSSO
             // 
@@ -55,7 +60,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BackColor = System.Drawing.Color.Maroon;
+            this.btnCancel.BackgroundImage = global::CS_MSG.Properties.Resources.img_close;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCancel.FlatAppearance.BorderSize = 0;
@@ -63,10 +69,9 @@
             this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::CS_MSG.Properties.Resources.img_close;
-            this.btnCancel.Location = new System.Drawing.Point(694, 2);
+            this.btnCancel.Location = new System.Drawing.Point(464, 0);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(24, 23);
+            this.btnCancel.Size = new System.Drawing.Size(16, 16);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = " ";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -76,16 +81,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CS_MSG.Properties.Resources.timg;
+            this.BackgroundImage = global::CS_MSG.Properties.Resources.bridge;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(720, 401);
+            this.ClientSize = new System.Drawing.Size(480, 300);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.labelCopyRight);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
+            this.Load += new System.EventHandler(this.FrmStart_Load);
             this.Shown += new System.EventHandler(this.FrmStart_Shown);
             this.DoubleClick += new System.EventHandler(this.FrmStart_DoubleClick);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmStart_MouseUp);

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<message>
+  <head>
+    <version>1.0</version>
+    <serviceType>AuthenService</serviceType>
+    <messageState>false</messageState>
+  </head>
+  <body>
+    <accessControlResult>Permit</accessControlResult>
+    <authResultSet allFailed="true">
+      <authResult authMode="cert" success="true" />
+    </authResultSet>
+    <attributes>
+      <attr name="X509Certificate.SubjectDN"
+				namespace="http://www.jit.com.cn/cinas/ias/ns/saml/saml11/X.509">CN=yanming_dai,E=yanming_dai@jit.com.cn,O=JIT,C=CN</attr>
+    </attributes>
+    <token>082ec3b6-4fe2-4d97-91bb-ce51402889f0</token>
+  </body>
+</message>

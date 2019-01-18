@@ -61,6 +61,36 @@ namespace CS_MSG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon _20190117091916685_easyicon_net_16 {
+            get {
+                object obj = ResourceManager.GetObject("_20190117091916685_easyicon_net_16", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap balloom {
+            get {
+                object obj = ResourceManager.GetObject("balloom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bridge {
+            get {
+                object obj = ResourceManager.GetObject("bridge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap img_cancel {
@@ -83,6 +113,16 @@ namespace CS_MSG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_girl {
+            get {
+                object obj = ResourceManager.GetObject("img_girl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_ok {
             get {
                 object obj = ResourceManager.GetObject("img_ok", resourceCulture);
@@ -93,9 +133,29 @@ namespace CS_MSG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap timg {
+        internal static System.Drawing.Bitmap img_qrcode {
             get {
-                object obj = ResourceManager.GetObject("timg", resourceCulture);
+                object obj = ResourceManager.GetObject("img-qrcode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sky {
+            get {
+                object obj = ResourceManager.GetObject("sky", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wind {
+            get {
+                object obj = ResourceManager.GetObject("wind", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

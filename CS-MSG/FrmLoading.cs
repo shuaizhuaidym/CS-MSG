@@ -54,18 +54,18 @@ namespace CS_MSG {
          * 取消登录关闭窗口
          */
         private void closeWin(object sender, EventArgs e) {
-            if (System.Windows.Forms.Application.MessageLoop) {
-                var confirmResult = MessageBox.Show("Are you sure to stop login??",
-                                     "Confirm Delete!!",
-                                     MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes) {
-                    System.Windows.Forms.Application.Exit();
-                } else {
-                    // If 'No', do something here.
-                }
-            } else {// Console app                
-                System.Environment.Exit(1);
-            }
+            //if (System.Windows.Forms.Application.MessageLoop) {
+            //    var confirmResult = MessageBox.Show("Are you sure to stop login??",
+            //                         "Confirm Delete!!",
+            //                         MessageBoxButtons.YesNo);
+            //    if (confirmResult == DialogResult.Yes) {
+            //        System.Windows.Forms.Application.Exit();
+            //    } else {
+            //        // If 'No', do something here.
+            //    }
+            //} else {// Console app                
+            //    System.Environment.Exit(1);
+            //}
         }
 
         ///**
@@ -81,17 +81,7 @@ namespace CS_MSG {
             try {
                 double pow = Math.Pow(i, i);
                 debug(pow);
-                //progressBar1.Invoke(animate, new object[]);
-                //Console.WriteLine(pow);
-                //using (Graphics gr = progressBar1.CreateGraphics()) {
-                //    gr.DrawString(percent + "%",
-                //        SystemFonts.DefaultFont,
-                //        Brushes.Black,
-                //        new PointF(progressBar1.Width / 2 - (gr.MeasureString(percent.ToString() + "%",
-                //            SystemFonts.DefaultFont).Width / 2.0F),
-                //        progressBar1.Height / 2 - (gr.MeasureString(percent.ToString() + "%",
-                //            SystemFonts.DefaultFont).Height / 2.0F)));
-                //}
+                //单点登录，成功则进入信息窗口，失败则显示登录窗口要求认证；
 
             } catch (Exception e) {
                 Console.WriteLine("Error Stack {0} ", e.Message);
@@ -106,11 +96,13 @@ namespace CS_MSG {
          */
         private void workerSSO_DoWork(object sender, DoWorkEventArgs e) {
             debug("workerSSO_DoWork");
-            //进度条显示
+            //单点登录
             sso(6);
+            //进度条显示
             for (int j = 0; j <= 100; j++) {                
                 workerSSO.ReportProgress(j);
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(5);
+                j++;
             }
         }
 
@@ -121,7 +113,11 @@ namespace CS_MSG {
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
             // TODO: do something with final calculation.
-            MessageBox.Show("Done");
+            //MessageBox.Show("Done");
+            FrmLogin frmLogin = new FrmLogin();
+            //this.Close();
+            frmLogin.Show();
+            this.Hide();
         }
 
         private void btnCancel_Click(object sender, EventArgs e) {
@@ -164,6 +160,14 @@ namespace CS_MSG {
         private void debug(object msg) {
             System.Diagnostics.Debug.Write(DateTime.Now.ToString("[yyyy-MM-dd hh:mm:ss] "));
             System.Diagnostics.Debug.WriteLine(msg);
+        }
+
+        private void FrmStart_Load(object sender, EventArgs e) {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e) {
+
         }
 
     }
