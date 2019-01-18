@@ -141,6 +141,29 @@ namespace CS_MSG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;message&gt;
+        ///  &lt;head&gt;
+        ///    &lt;version&gt;1.0&lt;/version&gt;
+        ///    &lt;serviceType&gt;AuthenService&lt;/serviceType&gt;
+        ///    &lt;messageState&gt;false&lt;/messageState&gt;
+        ///  &lt;/head&gt;
+        ///  &lt;body&gt;
+        ///    &lt;accessControlResult&gt;Permit&lt;/accessControlResult&gt;
+        ///    &lt;authResultSet allFailed=&quot;true&quot;&gt;
+        ///      &lt;authResult authMode=&quot;cert&quot; success=&quot;true&quot; /&gt;
+        ///    &lt;/authResultSet&gt;
+        ///    &lt;attributes&gt;
+        ///      &lt;attr name=&quot;X509Certificate.SubjectDN&quot;
+        ///				namespace=&quot;http://www.jit.com.cn/cinas/ias/ns/saml/saml11/X.509&quot;&gt;CN=yanming_dai, [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Message {
+            get {
+                return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap sky {

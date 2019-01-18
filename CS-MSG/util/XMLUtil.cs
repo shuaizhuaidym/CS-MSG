@@ -55,15 +55,16 @@ namespace CS_MSG.util {
             CS_MSG.Entity.Message msg = new CS_MSG.Entity.Message();
 
             XmlDocument doc = new XmlDocument();
+            
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreComments = true;//忽略文档里面的注释
-            XmlReader reader = null;
+           // XmlReader reader = null;
 
             try {
-                reader = XmlReader.Create(@xml, settings);
-                doc.Load(reader);
+                //reader = XmlReader.Create(Properties.Resources.Message, settings);
+                doc.LoadXml(Properties.Resources.Message);
             } catch (Exception ex) {
-                Console.WriteLine("err:null");
+                Console.WriteLine("err:"+ex.StackTrace);
             }
             //root
             XmlNode xn = doc.SelectSingleNode("message");
