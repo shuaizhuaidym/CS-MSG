@@ -21,6 +21,9 @@ namespace CS_MSG {
         private void btnLogin_Click(object sender, EventArgs e) {
             System.Threading.Thread.Sleep(100);
 
+            string auth_xml = "";//TODO call vctk com interface
+            CS_MSG.Service.LoginService.Login(auth_xml);
+
             FrmProfile frmProfile = new FrmProfile();
             frmProfile.Show();
             this.Hide();

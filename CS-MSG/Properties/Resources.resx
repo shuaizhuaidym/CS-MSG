@@ -151,4 +151,16 @@
   <data name="Message" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Message.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="str_close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="str_login_cert" xml:space="preserve">
+    <value>证书登录</value>
+  </data>
+  <data name="str_title_demo_msg" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str_title_profile" xml:space="preserve">
+    <value>认证信息</value>
+  </data>
 </root>
