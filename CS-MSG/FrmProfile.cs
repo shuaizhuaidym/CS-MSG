@@ -29,7 +29,7 @@ namespace CS_MSG {
          * 加载response xml作为数据原显示
          */
         private void FrmProfile_Load(object sender, EventArgs e) {
-            CS_MSG.Entity.Message msg = CS_MSG.util.XMLUtil.readDoc("../../Resources/Message.xml");
+            Entity.Message msg = util.XMLUtil.readDoc("../../Resources/Message.xml");
             fillGrid(msg);
         }
 

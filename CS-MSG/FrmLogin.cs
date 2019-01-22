@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace CS_MSG {
     public partial class FrmLogin : Form {
@@ -19,10 +20,8 @@ namespace CS_MSG {
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
-            System.Threading.Thread.Sleep(100);
-
             string auth_xml = "";//TODO call vctk com interface
-            CS_MSG.Service.LoginService.Login(auth_xml);
+            Service.LoginService.Login(auth_xml);
 
             FrmProfile frmProfile = new FrmProfile();
             frmProfile.Show();
@@ -30,7 +29,7 @@ namespace CS_MSG {
         }
 
         private void label1_Click(object sender, EventArgs e) {
-            
+
         }
 
         private void FrmLogin_Load(object sender, EventArgs e) {

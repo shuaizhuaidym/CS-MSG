@@ -133,9 +133,6 @@
   <data name="img_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_20190117091916685_easyicon_net_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20190117091916685_easyicon_net_16.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="balloom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balloom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,5 +159,18 @@
   </data>
   <data name="str_title_profile" xml:space="preserve">
     <value>认证信息</value>
+  </data>
+  <data name="str_app_id" xml:space="preserve">
+    <value>UIAS</value>
+  </data>
+  <data name="str_login_url" xml:space="preserve">
+    <value>http://172.16.7.80:6180/MessageService</value>
+    <comment>报文认证地址</comment>
+  </data>
+  <data name="sso_request" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sso-request.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;gb2312</value>
+  </data>
+  <data name="str_gateway_ip" xml:space="preserve">
+    <value>192.168.9.110</value>
   </data>
 </root>

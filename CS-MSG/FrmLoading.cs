@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
+using System.Threading;
 
 namespace CS_MSG {
     public partial class FrmStart : Form {
-        private ContextMenuStrip contextMenu;
-        
+        //Delegate for cross thread call to close
+        private delegate void CloseDelegate();
+
+        //The type of form to be displayed as the splash screen.
+        private static FrmStart splashForm;
+
         /**
          * 构造函数
          */
@@ -19,120 +24,34 @@ namespace CS_MSG {
             InitializeComponent();
         }
 
-        /**
-         *注册COM组件 
-         */
-        private bool registerCOM() {
-            Type myType = Type.GetTypeFromProgID("IMyLib.MyClass");
-            object obj = Activator.CreateInstance(myType);
-            object[] args = new object[2];
-            args[0] = "Hello";
-            args[1] = 3;
-            //myType.InvokeMember("MyMethod", BindingFlags.InvokeMethod, obj, args);
-
-            //In .Net 4 something like this
-
-            //Type myType = Type.GetTypeFromProgID("IMyLib.MyClass");
-            //dynamic obj = Activator.CreateInstance(myType);
-            //obj.MyMethod("Hello", 3);
-            return true;
-        }
-
-        /**
-         *窗体显示出来后，开启后台进程调用PNXClient组件点点登录
-         */
-        private void FrmStart_Shown(object sender, EventArgs e) {
-            
-            this.labelCopyRight.Text = "Copy right@长春吉大正元信息技术股份有限公司";
-            this.labelCopyRight.BackColor = System.Drawing.Color.Transparent;
-            this.labelCopyRight.ForeColor = System.Drawing.Color.Transparent;
-            //TODO 调用PNXClient获取Token做T+A业务                      
-            this.workerSSO.RunWorkerAsync();
-        }
-
-        /**
-         * 取消登录关闭窗口
-         */
-        private void closeWin(object sender, EventArgs e) {
-            //if (System.Windows.Forms.Application.MessageLoop) {
-            //    var confirmResult = MessageBox.Show("Are you sure to stop login??",
-            //                         "Confirm Delete!!",
-            //                         MessageBoxButtons.YesNo);
-            //    if (confirmResult == DialogResult.Yes) {
-            //        System.Windows.Forms.Application.Exit();
-            //    } else {
-            //        // If 'No', do something here.
-            //    }
-            //} else {// Console app                
-            //    System.Environment.Exit(1);
-            //}
-        }
-
-        ///**
-        // * 单点登录动画（进度条）
-        // */
-        //private void animate(object sender, EventArgs e) {
-        //    ((ProgressBar)sender).Style = ProgressBarStyle.Marquee;
-        //}
-        /**
-         * 单点登录
-         */
-        private bool sso(int i)  {
-            try {
-                double pow = Math.Pow(i, i);
-                debug(pow);
-                //单点登录，成功则进入信息窗口，失败则显示登录窗口要求认证；
-
-            } catch (Exception e) {
-                Console.WriteLine("Error Stack {0} ", e.Message);
-            } finally {
-                //System.Threading.Thread.Sleep(5000);
+        public static void ShowSplashScreen() {
+            // Make sure it is only launched once.
+            if (splashForm != null) {
+                return;
             }
-            return false;
+            Thread thread = new Thread(new ThreadStart(FrmStart.ShowForm));
+            thread.IsBackground = true;
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+        static private void ShowForm() {
+            splashForm = new FrmStart();
+            splashForm.Show();
+            //splashForm.BringToFront();
+            //Application.Run(splashForm);
         }
 
-        /**
-         * 后台单点登录工作线程
-         */
-        private void workerSSO_DoWork(object sender, DoWorkEventArgs e) {
-            debug("workerSSO_DoWork");
-            //单点登录
-            sso(6);
-            //进度条显示
-            for (int j = 0; j <= 100; j++) {                
-                workerSSO.ReportProgress(j);
-                System.Threading.Thread.Sleep(5);
-                j++;
-            }
+        static public void CloseForm() {
+            splashForm.Invoke(new CloseDelegate(FrmStart.CloseFormInternal));
         }
 
-        private void workerSSO_ProgressChanged(object sender, ProgressChangedEventArgs e) {
-            debug(e.ProgressPercentage);
-            progressBar1.Value = e.ProgressPercentage;
-        }
-
-        private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-            // TODO: do something with final calculation.
-            //MessageBox.Show("Done");
-            FrmLogin frmLogin = new FrmLogin();
-            //this.Close();
-            frmLogin.Show();
-            this.Hide();
+        static private void CloseFormInternal() {
+            splashForm.Close();
+            splashForm = null;
         }
 
         private void btnCancel_Click(object sender, EventArgs e) {
             System.Windows.Forms.Application.Exit();
-        }
-
-        /**
-         *注册右键菜单
-         */
-        private void registerContextMenu() {
-            contextMenu = new ContextMenuStrip();
-            Image icon = Properties.Resources.img_cancel;
-            ToolStripMenuItem menu = new ToolStripMenuItem("Quit", icon, closeWin);
-            contextMenu.Items.Add(menu);
-            this.ContextMenuStrip = contextMenu;
         }
 
         /**

@@ -74,8 +74,7 @@
             this.gridProfile.RowTemplate.Height = 23;
             this.gridProfile.Size = new System.Drawing.Size(610, 242);
             this.gridProfile.TabIndex = 0;
-            this.gridProfile.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProfile_CellContentClick);
-            // 
+            //
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));

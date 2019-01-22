@@ -23,26 +23,31 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStart));
             this.labelCopyRight = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.workerSSO = new System.ComponentModel.BackgroundWorker();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCopyRight
             // 
             this.labelCopyRight.AutoSize = true;
-            this.labelCopyRight.Location = new System.Drawing.Point(156, 279);
+            this.labelCopyRight.BackColor = System.Drawing.Color.Transparent;
+            this.labelCopyRight.ForeColor = System.Drawing.Color.White;
+            this.labelCopyRight.Location = new System.Drawing.Point(116, 279);
             this.labelCopyRight.MinimumSize = new System.Drawing.Size(200, 0);
             this.labelCopyRight.Name = "labelCopyRight";
-            this.labelCopyRight.Size = new System.Drawing.Size(200, 12);
+            this.labelCopyRight.Size = new System.Drawing.Size(263, 12);
             this.labelCopyRight.TabIndex = 0;
-            this.labelCopyRight.Text = "copy right";
+            this.labelCopyRight.Text = "Copy right@长春吉大正元信息技术股份有限公司";
             // 
             // progressBar1
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.progressBar1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.progressBar1.BackColor = System.Drawing.SystemColors.Control;
             this.progressBar1.Location = new System.Drawing.Point(12, 259);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(456, 17);
@@ -54,9 +59,6 @@
             // 
             this.workerSSO.WorkerReportsProgress = true;
             this.workerSSO.WorkerSupportsCancellation = true;
-            this.workerSSO.DoWork += new System.ComponentModel.DoWorkEventHandler(this.workerSSO_DoWork);
-            this.workerSSO.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.workerSSO_ProgressChanged);
-            this.workerSSO.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
             // btnCancel
             // 
@@ -77,6 +79,17 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.InitialImage = global::CS_MSG.Properties.Resources.balloom;
+            this.pictureBox1.Location = new System.Drawing.Point(373, 174);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -84,6 +97,7 @@
             this.BackgroundImage = global::CS_MSG.Properties.Resources.bridge;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(480, 300);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.labelCopyRight);
@@ -93,9 +107,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
             this.Load += new System.EventHandler(this.FrmStart_Load);
-            this.Shown += new System.EventHandler(this.FrmStart_Shown);
             this.DoubleClick += new System.EventHandler(this.FrmStart_DoubleClick);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmStart_MouseUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,6 +121,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker workerSSO;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

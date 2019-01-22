@@ -32,7 +32,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Maroon;
+            this.btnLogin.BackColor = System.Drawing.Color.OrangeRed;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -65,7 +65,6 @@
             this.label1.Size = new System.Drawing.Size(314, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "报文认证示例";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmLogin
             // 

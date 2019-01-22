@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<head>
+		<version>1.0</version>
+		<serviceType>msg_ta_service</serviceType>
+	</head>
+	<body>
+		<clientInfo>
+			<clientIP>{0}</clientIP>
+		</clientInfo>
+		<token>{1}</token>
+		<appId>{2}</appId >
+		<CustomAttributes></CustomAttributes>
+	</body>
+</message>

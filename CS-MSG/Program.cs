@@ -12,7 +12,16 @@ namespace CS_MSG {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStart());
+
+            FrmStart.ShowSplashScreen();
+
+            Service.SSOService ssoService = new Service.SSOService();
+
+            ssoService.SingleSignOn(Properties.Resources.str_app_id, Properties.Resources.str_gateway_ip);
+            //MainForm mainForm = new MainForm(); //this takes ages
+
+            //FrmStart.CloseForm();
+            //Application.Run(new FrmStart());
         }
     }
 }

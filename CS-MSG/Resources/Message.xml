@@ -13,6 +13,8 @@
     <attributes>
       <attr name="X509Certificate.SubjectDN"
 				namespace="http://www.jit.com.cn/cinas/ias/ns/saml/saml11/X.509">CN=yanming_dai,E=yanming_dai@jit.com.cn,O=JIT,C=CN</attr>
+      <attr name="电子邮件"
+				namespace="http://www.jit.com.cn/cinas/ias/ns/saml/saml11/X.509">yanming_dai@jit.com</attr>
     </attributes>
     <token>082ec3b6-4fe2-4d97-91bb-ce51402889f0</token>
   </body>

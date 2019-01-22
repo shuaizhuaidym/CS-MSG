@@ -62,6 +62,8 @@ namespace CS_MSG.util {
 
             try {
                 //reader = XmlReader.Create(Properties.Resources.Message, settings);
+                //string xpath = "myDataz/listS/sog";
+                //var nodes = xmlDoc.SelectNodes(xpath);
                 doc.LoadXml(Properties.Resources.Message);
             } catch (Exception ex) {
                 Console.WriteLine("err:"+ex.StackTrace);
