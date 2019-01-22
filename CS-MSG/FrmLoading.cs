@@ -30,8 +30,8 @@ namespace CS_MSG {
                 return;
             }
             Thread thread = new Thread(new ThreadStart(FrmStart.ShowForm));
-            thread.IsBackground = true;
-            thread.SetApartmentState(ApartmentState.STA);
+            //thread.IsBackground = true;
+            //thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
         static private void ShowForm() {

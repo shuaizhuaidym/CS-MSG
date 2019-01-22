@@ -20,7 +20,7 @@ namespace CS_MSG {
             ssoService.SingleSignOn(Properties.Resources.str_app_id, Properties.Resources.str_gateway_ip);
             //MainForm mainForm = new MainForm(); //this takes ages
 
-            //FrmStart.CloseForm();
+            FrmStart.CloseForm();
             //Application.Run(new FrmStart());
         }
     }

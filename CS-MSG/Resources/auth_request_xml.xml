@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<head>
+		<version>1.0</version>
+		<serviceType>AuthenService</serviceType>
+	</head>
+	<body>
+		<clientInfo>
+			<clientIP>{0}</clientIP>
+		</clientInfo>
+		<appId>UIAS</appId>
+		<authen>
+			<authCredential authMode="cert">
+        <original>{1}</original>
+				<detach>{2}</detach>
+			</authCredential>
+		</authen>
+		<accessControl>true</accessControl>
+		<attributes attributeType="all" />
+	</body>
+</message>

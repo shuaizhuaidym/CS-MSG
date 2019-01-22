@@ -1,4 +1,5 @@
-﻿namespace CS_MSG {
+﻿using System.Drawing;
+namespace CS_MSG {
     partial class FrmLogin {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +33,8 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -85,7 +87,6 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "    报文认证示例";
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

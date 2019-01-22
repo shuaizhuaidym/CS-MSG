@@ -10,20 +10,25 @@ using CS_MSG.util;
 
 namespace CS_MSG.Service {
     //TODO 统一结果处理接口
-    class SSOService {                   
+    class SSOService {           
         public SSOService() { }
         /**
          *注册COM组件，完成token获取、单点登录 
          */
         private string GetToken(string gateway_ip) {
             string token = null;
+            IPNXDataTrans COM = null;
             try {
-                IPNXDataTrans tt = new PNXDataTrans();
-                token = tt.GetSessionToken(gateway_ip);
+                COM = new PNXDataTrans();
+                token = COM.GetSessionToken(gateway_ip);
             } catch (Exception e) {
                 MessageBox.Show(e.Message);
                 //TODO release resource
-            }            
+            } finally {
+                if (COM.GetLastError() != 0) {
+                    string errMSG = COM.GetLastErrorMessage();
+                }
+            }
             return token;
 
         }
@@ -48,7 +53,6 @@ namespace CS_MSG.Service {
                 } else {
                     showLoginForm();
                 }
-                FrmStart.CloseForm();
 
             } catch (IOException e) {
                 MessageBox.Show("单点登录异常，详细信息请查看日志:"+e.Message);

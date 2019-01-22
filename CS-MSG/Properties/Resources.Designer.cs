@@ -61,6 +61,35 @@ namespace CS_MSG.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;message&gt;
+        ///	&lt;head&gt;
+        ///		&lt;version&gt;1.0&lt;/version&gt;
+        ///		&lt;serviceType&gt;AuthenService&lt;/serviceType&gt;
+        ///	&lt;/head&gt;
+        ///	&lt;body&gt;
+        ///		&lt;clientInfo&gt;
+        ///			&lt;clientIP&gt;{0}&lt;/clientIP&gt;
+        ///		&lt;/clientInfo&gt;
+        ///		&lt;appId&gt;UIAS&lt;/appId&gt;
+        ///		&lt;authen&gt;
+        ///			&lt;authCredential authMode=&quot;cert&quot;&gt;
+        ///        &lt;original&gt;{1}&lt;/original&gt;
+        ///				&lt;detach&gt;{2}&lt;/detach&gt;
+        ///			&lt;/authCredential&gt;
+        ///		&lt;/authen&gt;
+        ///		&lt;accessControl&gt;true&lt;/accessControl&gt;
+        ///		&lt;attributes attributeType=&quot;all&quot; /&gt;
+        ///	&lt;/body&gt;
+        ///&lt;/message&gt;.
+        /// </summary>
+        internal static string auth_request_xml {
+            get {
+                return ResourceManager.GetString("auth_request_xml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap balloom {
@@ -156,6 +185,16 @@ namespace CS_MSG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap moss {
+            get {
+                object obj = ResourceManager.GetObject("moss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sky {
             get {
                 object obj = ResourceManager.GetObject("sky", resourceCulture);
@@ -206,7 +245,7 @@ namespace CS_MSG.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 192.168.9.110.
+        ///   Looks up a localized string similar to 192.168.9.112.
         /// </summary>
         internal static string str_gateway_ip {
             get {
@@ -233,7 +272,7 @@ namespace CS_MSG.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to 报文认证示例.
         /// </summary>
         internal static string str_title_demo_msg {
             get {
