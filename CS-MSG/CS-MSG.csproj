@@ -126,6 +126,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sand-sea.png" />
+    <None Include="Resources\token-wind.png" />
     <None Include="Resources\moss.png" />
     <None Include="Resources\auth_request_xml.xml" />
     <Content Include="Resources\Message.xml" />

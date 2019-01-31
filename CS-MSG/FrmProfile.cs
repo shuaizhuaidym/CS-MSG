@@ -36,8 +36,8 @@ namespace CS_MSG {
         //填充表格
         private void fillGrid(CS_MSG.Entity.Message response_data) {
 
-            tlpResult.Controls.Add(new Label { Text = "Version:", Anchor = AnchorStyles.Left, AutoSize = true }, 0, 0);
-            tlpResult.Controls.Add(new Label { Text = "Mode:", Anchor = AnchorStyles.Left, AutoSize = true }, 0, 1);
+            tlpResult.Controls.Add(new Label { Text = "Proto Version:", Anchor = AnchorStyles.Left, AutoSize = true }, 0, 0);
+            tlpResult.Controls.Add(new Label { Text = "Login Mode:", Anchor = AnchorStyles.Left, AutoSize = true }, 0, 1);
             tlpResult.Controls.Add(new Label { Text = "Success:", Anchor = AnchorStyles.Left, AutoSize = true }, 0, 2);
 
             tlpResult.Controls.Add(new Label { Text = response_data.Version, Anchor = AnchorStyles.Left, AutoSize = true }, 1, 0);
@@ -58,9 +58,9 @@ namespace CS_MSG {
 
             // Set the column header names.
             gridProfile.Columns[0].Name = "NO";
-            gridProfile.Columns[1].Name = "Name";
+            gridProfile.Columns[1].Name = "Attr Name";
             gridProfile.Columns[2].Name = "Namespace";
-            gridProfile.Columns[3].Name = "Value";
+            gridProfile.Columns[3].Name = "Attr Value";
 
             gridProfile.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             gridProfile.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

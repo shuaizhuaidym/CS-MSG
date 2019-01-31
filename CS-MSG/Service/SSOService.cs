@@ -61,7 +61,8 @@ namespace CS_MSG.Service {
         }
 
         private void showLoginForm() {
-            FrmLogin frmLogin = new FrmLogin();
+            FrmProfile frmProfile = new FrmProfile();
+            FrmLogin frmLogin = new FrmLogin(frmProfile);
             Application.Run(frmLogin);
         }
 

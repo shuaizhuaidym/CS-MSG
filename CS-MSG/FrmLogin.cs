@@ -11,13 +11,19 @@ using PNXClientLib;
 
 namespace CS_MSG {
     public partial class FrmLogin : Form {
-        public FrmLogin() {
+        private FrmProfile frmProfile;
+        private bool needClose;
+
+        public FrmLogin(FrmProfile frmProfile) {
             InitializeComponent();
+            this.frmProfile = frmProfile;
             this.FormClosed += new FormClosedEventHandler(FrmLogin_FormClosed);
         }
 
         private void FrmLogin_FormClosed(object sender, EventArgs e) {
-            System.Environment.Exit(1);
+            if (needClose) {
+                System.Environment.Exit(1);
+            }                                          
         }
 
         /// <summary>
@@ -55,10 +61,10 @@ namespace CS_MSG {
             string signature = signatureP1(random, true, true);
             string auth_xml = buildAuthXML(random, signature);//TODO call vctk com interface
 
-            Service.LoginService.Login(auth_xml);
+            string policy = Service.LoginService.Login(auth_xml);
 
-            FrmProfile frmProfile = new FrmProfile();
             frmProfile.Show();
+            needClose = false;
             this.Hide();
         }
 

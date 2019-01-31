@@ -195,6 +195,16 @@ namespace CS_MSG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sand_sea {
+            get {
+                object obj = ResourceManager.GetObject("sand_sea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sky {
             get {
                 object obj = ResourceManager.GetObject("sky", resourceCulture);
@@ -286,6 +296,16 @@ namespace CS_MSG.Properties {
         internal static string str_title_profile {
             get {
                 return ResourceManager.GetString("str_title_profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap token_wind {
+            get {
+                object obj = ResourceManager.GetObject("token_wind", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

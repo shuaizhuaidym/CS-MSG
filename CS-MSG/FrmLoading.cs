@@ -46,6 +46,7 @@ namespace CS_MSG {
         }
 
         static private void CloseFormInternal() {
+            splashForm.Hide();
             splashForm.Close();
             splashForm = null;
         }
